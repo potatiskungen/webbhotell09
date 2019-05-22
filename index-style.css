@@ -1,0 +1,83 @@
+article, aside, footer {
+  background-color: #ddd;
+  border-radius: 15px;
+  padding: 1%;
+
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "header header" "nav nav" "section section " "aside aside" "footer footer ";
+  grid-gap: .5em 1em
+
+}
+
+@media screen and (min-width:600px) {
+  body {
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: "header  header" "nav  nav" "section  aside" "footer  footer";
+    grid-gap: 1em 2em
+  }
+}
+article, aside, footer,nav {
+  border-radius: 15px;
+  padding: 1%;
+}
+nav a{
+    border-radius: 15px;
+}
+header {
+  grid-area: header
+}
+
+nav {
+  grid-area: nav;
+  background-color: rgba(255, 255, 255, .5)
+}
+
+section {
+  grid-area: section
+}
+
+article {
+  grid-area: article;
+  background-color: rgba(255, 255, 255, .5)
+}
+
+aside {
+  grid-area: aside;
+  background-color: transparent
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgba(255, 255, 255, .5);
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width:600px) {
+ body{
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: "header header"
+   "section section" "aside aside" "footer footer";
+   grid-gap: 1em 2em;
+ }
+}
+
+img#logga{
+ width: 15%
+}
+
+img#reception{
+  width: 100%
+}
+.active {
+    background-color: blue;
+    color: white;
+}
